@@ -16,7 +16,7 @@ body {
   font-weight: 400;
   height: 100vh;
   color: #333;
-  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  background-image: linear-gradient(to top left, #b72c2c 0%, #078529d5 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,7 +162,7 @@ main {
 }
 
 .player--loser{
-  background-color: rgb(75, 71, 71);
+  background-color: rgb(216, 86, 86);
 }
 
 .player--winner .name {
