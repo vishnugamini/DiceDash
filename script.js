@@ -23,7 +23,8 @@ document.querySelector('.btn--hold').addEventListener('click', MainScoreUpdate);
 document.querySelector('.btn--new').addEventListener('click', function () {
   playerOneActivity = true;
   playerTwoActivity = false;
-  activePlayer();
+  playerZero.classList.add('player--active');
+  playerOne.classList.remove('player--active');
   playerOneScore.textContent = '0';
   playerOneCurrentScore.textContent = '0';
   playerTwoScore.textContent = '0';
@@ -34,6 +35,8 @@ document.querySelector('.btn--new').addEventListener('click', function () {
   playerOne.classList.remove('player--loser');
   playerZero.classList.remove('player--winner');
   playerOne.classList.remove('player--winner');
+  document.querySelector('body').classList.remove('right-wins');
+  document.querySelector('body').classList.remove('left-wins');
 });
 
 function rollDice() {
@@ -48,19 +51,21 @@ function rollDice() {
 }
 
 function addscores(diceValue) {
-  if (playerOneActivity === true && playerTwoActivity === false) {
+  if (playerOneActivity === true) {
     if (diceValue != 1) {
       var playerOneNum = String(
         Number(playerOneCurrentScore.textContent) + diceValue
       );
       playerOneCurrentScore.textContent = playerOneNum;
-    } else if (diceValue == 1) {
+    } 
+    else if (diceValue == 1) {
       playerOneCurrentScore.textContent = '0';
       playerOneActivity = false;
       playerTwoActivity = true;
       activePlayer();
     }
-  } else if (playerTwoActivity === true && playerOneActivity === false) {
+  } 
+  else if (playerTwoActivity === true) {
     if (diceValue != 1) {
       var playerTwoNum = String(
         Number(playerTwoCurrentScore.textContent) + diceValue
@@ -100,13 +105,8 @@ function MainScoreUpdate() {
 }
 
 function activePlayer() {
-  if (playerOneActivity === true) {
-    playerZero.classList.add('player--active');
-    playerOne.classList.remove('player--active');
-  } else if (playerTwoActivity === true) {
-    playerZero.classList.remove('player--active');
-    playerOne.classList.add('player--active');
-  }
+  playerZero.classList.toggle('player--active');
+  playerOne.classList.toggle('player--active');
 }
 
 function winner() {
@@ -115,12 +115,14 @@ function winner() {
     playerZero.classList.add('player--winner');
     playerOne.classList.add('player--loser');
     hasWon = true;
-    console.log('player one has won');
-  } else if (Number(playerTwoScore.textContent) >= 50) {
-    playerZero.classList.add('player--loser');
+    document.querySelector('body').classList.add('right-wins')
+  }
+   else if (Number(playerTwoScore.textContent) >= 50) {
     playerOne.classList.remove('player--active');
     playerOne.classList.add('player--winner');
+    playerZero.classList.add('player--loser');
     hasWon = true;
-    console.log('player two has won');
+    document.querySelector('body').classList.add('left-wins')
   }
+  
 }

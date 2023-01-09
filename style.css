@@ -16,11 +16,12 @@ body {
   font-weight: 400;
   height: 100vh;
   color: #333;
-  background-image: linear-gradient(to top left, #b72c2c 0%, #078529d5 100%);
+  background-image: linear-gradient(to top left, #922727 0%, #19a13dd5 100%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 /* LAYOUT */
 main {
@@ -34,6 +35,15 @@ main {
   border-radius: 9px;
   overflow: hidden;
   display: flex;
+}
+
+.right-wins{
+  background-image: linear-gradient(to top left, #f70707 0%, #04fd47d5 100%);
+}
+
+.left-wins{
+  background-image: linear-gradient(to top left,#04fd47d5 0%, #f70707 100%);
+
 }
 
 .player {
