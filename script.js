@@ -110,14 +110,14 @@ function activePlayer() {
 }
 
 function winner() {
-  if (Number(playerOneScore.textContent) >= 50) {
+  if (Number(playerOneScore.textContent) >= 200) {
     playerZero.classList.remove('player--active');
     playerZero.classList.add('player--winner');
     playerOne.classList.add('player--loser');
     hasWon = true;
     document.querySelector('body').classList.add('right-wins')
   }
-   else if (Number(playerTwoScore.textContent) >= 50) {
+   else if (Number(playerTwoScore.textContent) >= 200) {
     playerOne.classList.remove('player--active');
     playerOne.classList.add('player--winner');
     playerZero.classList.add('player--loser');
