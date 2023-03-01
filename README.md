@@ -6,12 +6,14 @@ Pig is a simple dice game. Players take turns to roll a single dice as many time
 
 ## Gameplay
 
-Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold".
+<ul>
+<li>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold".</li>
 
-If the player rolls a 1, they score nothing and it becomes the next player's turn.
+<li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
 
-If the player rolls any other number, it is added to their turn total and the player's turn continues.
+<li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
 
-If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+<li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
 
-The first player to score 50 or more points wins.
+<li>The first player to score 50 or more points wins.</li>
+</ul>
