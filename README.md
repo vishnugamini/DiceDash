@@ -1,22 +1,36 @@
-# A simple 2 player PIG Game
+# Pig Game
 
-## Here is the link to Website
-https://two-player-pig-game.netlify.app/
+A simple 2-player Pig Game implemented using HTML, CSS, and JavaScript.
+
+## Website
+
+You can play the Pig Game on the following website:
+
+[https://two-player-pig-game.netlify.app/](https://two-player-pig-game.netlify.app/)
 
 ## Description
 
-Pig is a simple dice game. Players take turns to roll a single dice as many times as they wish, adding all roll results to a running total, but losing their gained score for the turn if they roll a 1.
+Pig is a simple dice game. Players take turns rolling a single die, accumulating points with each roll. However, if a player rolls a 1, their turn ends, and they lose all points gained in that turn. The objective is to be the first player to reach or exceed a score of 50.
+
+## Technologies Used
+
+The Pig Game project utilizes the following technologies:
+
+- HTML: Used for structuring the web page elements.
+- CSS: Used for styling the user interface and adding visual enhancements.
+- JavaScript: Used for implementing the game logic, handling user interactions, and dynamic updates.
 
 ## Gameplay
 
-<ul>
-<li>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold".</li>
+The rules of the Pig Game are as follows:
 
-<li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+- Each player takes turns rolling a single die.
+- On their turn, a player can choose to roll the die multiple times to accumulate points.
+- If a player rolls a 1, their turn ends, and they lose all points gained in that turn.
+- If a player rolls any other number, that number is added to their turn total.
+- The player can continue rolling as long as they wish or until they choose to "hold."
+- If a player chooses to "hold," their turn total is added to their overall score.
+- The next player then takes their turn.
+- The game continues until one player reaches or exceeds a score of 50.
+- The player who reaches the winning score first is declared the winner.
 
-<li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
-
-<li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
-
-<li>The first player to score 50 or more points wins.</li>
-</ul>
