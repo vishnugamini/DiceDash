@@ -1,4 +1,4 @@
-# Pig Game
+# Dice Dash
 
 A simple 2-player Pig Game implemented using HTML, CSS, and JavaScript.
 
